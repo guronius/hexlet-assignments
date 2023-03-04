@@ -6,7 +6,7 @@ require_relative '../lib/stack'
 class StackTest < Minitest::Test
   # BEGIN
 
-  private def setup
+  def setup
     @elems = [1, 2, 3]
     @stack = Stack.new(@elems)
   end
@@ -17,7 +17,7 @@ class StackTest < Minitest::Test
   end
 
   def test_pop
-    assert { @stack.pop! == 3 and @elems.size == 2  }
+    assert { @stack.pop! == 3 and @elems.size == 2 }
   end
 
   def test_empty?
